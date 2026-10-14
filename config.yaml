@@ -1,0 +1,39 @@
+# SmartBI Pro Configuration
+
+data:
+  max_file_size_mb: 200
+  sample_rows_preview: 100
+  encoding_fallback: "utf-8"
+
+cleaning:
+  drop_duplicates: true
+  outlier_iqr_low: 0.01
+  outlier_iqr_high: 0.99
+  numeric_impute_strategy: "median"   # median / mean / zero
+
+forecasting:
+  periods: 6
+  min_points_for_prophet: 8
+  confidence_interval: 0.90
+
+anomaly:
+  contamination: 0.05
+  random_state: 42
+  z_threshold: 2.5
+
+segmentation:
+  max_k: 6
+  min_rows: 20
+  random_state: 42
+
+insights:
+  top_n_contributors: 5
+  growth_alert_threshold: 5.0        # percentage
+
+decisions:
+  high_priority_threshold: -5.0      # MoM growth %
+  growth_positive_threshold: 10.0
+
+logging:
+  level: "INFO"
+  log_file: "outputs/smartbi.log"

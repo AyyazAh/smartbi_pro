@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+plotly
+scikit-learn
+prophet
+statsmodels
+openpyxl
+chardet
+python-dateutil
+pyyaml
+fpdf2
+scipy
+loguru
